@@ -78,7 +78,7 @@ public class ImageSearch  {
                 
                 // Initialize a webdriver and execute the search request
                 WebDriver driver;
-            	System.setProperty("webdriver.gecko.driver", "C:\\Users\\FrankGee\\Downloads\\geckodriver-v0.17.0-win64\\geckodriver.exe");
+            	System.setProperty("webdriver.gecko.driver", "Gecko Driver Path here");
             	String getRequest = "https://www.google.com/searchbyimage?site=search&sa=X&image_url=http://lotus.cs.northwestern.edu/icons/images/" + imageDir + "/" + imageName;
             	driver = new FirefoxDriver(profile);
             	try{
@@ -111,7 +111,7 @@ public class ImageSearch  {
                 	System.out.println("Result: " + imageDir + " | " + imageName + " | " + meaning);
                 	
                 	try {
-            			FileWriter fileWriter = new FileWriter("D:\\SearchOutput.txt", true);
+            			FileWriter fileWriter = new FileWriter("Output File and Path here", true);
             			fileWriter.write(imageDir + ".apk | " + imageName + " | " + meaning + "\n");
             			fileWriter.close();
             		} catch (IOException e) {
